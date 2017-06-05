@@ -23,44 +23,29 @@
                      <!--End ToolsBar Top-->
 
                      <!--ToolsBar Bottom-->
-    <android.support.design.widget.AppBarLayout
+    <FrameLayout
+        android:id="@+id/Content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        >
-        <android.support.v7.widget.Toolbar
+        android:layout_height="464dp"
+        android:layout_marginBottom="54dp"
+        android:layout_marginTop="54dp">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomNavView_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/toolbarbottom"
-            android:background="@drawable/white_grey_border_top"
-            >
+            android:layout_height="match_parent"
+            android:background="@drawable/white_grey_border_bottom"
+            app:menu="@menu/bottom_navigation_menu">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="20"
-                    android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
-                    />
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="20"
-                    android:src="@drawable/ic_home_black_24dp"
-                    />
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="20"
-                    android:src="@drawable/ic_settings_black_24dp"
-                    />
-            </LinearLayout>
-        </android.support.v7.widget.Toolbar>
-    </android.support.design.widget.AppBarLayout>
+        </android.support.design.widget.BottomNavigationView>
+    </RelativeLayout>
                     <!--End ToolsBar Bottom-->
 </android.support.design.widget.CoordinatorLayout>
